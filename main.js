@@ -17,6 +17,12 @@ function generatePassword(len) {
 }
 
 function getPassword() {
+    const len = parseInt(passwordLenght.value);
+    if(len < 0) {
+        alert("MASUKIN YANG BENER KONTOL");
+        return;
+    }
+
     const newPassword = generatePassword(passwordLenght.value);
     password.value = newPassword;
 }
